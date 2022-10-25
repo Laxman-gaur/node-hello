@@ -20,7 +20,7 @@ pipeline {
 
         stage('deploy') { 
             steps {
-                sh 'npm start /home/ubuntu/kaushal-ka-code' 
+                sh 'pm2 start index.js' 
             }
         }
     }
