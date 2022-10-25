@@ -9,7 +9,7 @@ pipeline {
         }
         stage('change directory') {
             steps {
-                sh 'cd /home/ubuntu/'
+                sh 'cd /home/ubuntu/node-hello/'
             }
         }
         stage('approve') {
