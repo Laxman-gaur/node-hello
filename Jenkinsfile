@@ -7,11 +7,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('change directory') {
-            steps {
-                sh 'cd /home/ubuntu/node-hello/'
-            }
-        }
         stage('approve') {
             steps {
                 input 'kindly approve for this deployment'
@@ -20,7 +15,7 @@ pipeline {
 
         stage('deploy') { 
             steps {
-                sh 'pm2 start node-hello.js' 
+                sh 'pm2 start /node-hello/node-hello.js' 
             }
         }
     }
