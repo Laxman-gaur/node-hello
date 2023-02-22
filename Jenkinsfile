@@ -15,7 +15,7 @@ pipeline {
 
         stage('deploy') { 
             steps {
-                sh 'pm2 start /node-hello/node-hello.js' 
+                sh 'pm2 start app.js' 
             }
         }
     }
